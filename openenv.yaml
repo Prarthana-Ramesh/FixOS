@@ -1,0 +1,36 @@
+name: fixos
+id: fixos-os-troubleshooting
+version: 1.0.0
+description: Deterministic OS troubleshooting environment for agentic RL evaluation.
+entrypoint:
+  module: os_simulator.environment
+  class: OSEnvironment
+interfaces:
+  reset: true
+  step: true
+  state: true
+models:
+  action: os_simulator.models.Action
+  observation: os_simulator.models.Observation
+  reward: os_simulator.models.Reward
+tasks:
+  defaults:
+    - easy
+    - medium
+    - hard
+  variants:
+    easy:
+      - easy_1
+      - easy_2
+    medium:
+      - medium_1
+      - medium_2
+    hard:
+      - hard_1
+      - hard_2
+      - hard_3
+determinism:
+  seeded: true
+  notes: Same task_id and action sequence always produce identical results.
+container:
+  dockerfile: Dockerfile

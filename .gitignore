@@ -1,0 +1,4 @@
+__pycache__/
+os_simulator/__pycache__/
+tests/__pycache__/
+venv/
