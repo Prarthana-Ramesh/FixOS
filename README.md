@@ -2,6 +2,8 @@
 
 FixOS is a deterministic OpenEnv-compatible OS troubleshooting environment for evaluating agent reasoning, diagnosis quality, action efficiency, and recovery correctness.
 
+
+
 ## Environment Description
 
 The environment simulates realistic system administration workflows:
@@ -74,6 +76,10 @@ Aliases:
 - Penalizes inefficient and redundant behavior
 - Hard graders evaluate quality dimensions: diagnosis, order, issue resolution, and efficiency
 - Scores are clamped to `[0.0, 1.0]`
+
+## GUI Preview
+
+![FixOS GUI](assets/gui.png)
 
 ## Setup
 
